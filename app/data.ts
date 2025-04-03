@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'alki',
     description: 'algorithm learning x spaced repetition',
-    link: 'https://alkiprep.com',
+    link: 'https://www.alkiprep.com/',
     video: '/alkiprep.png',
     id: 'project1',
   },
