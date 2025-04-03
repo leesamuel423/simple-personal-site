@@ -150,16 +150,10 @@ export const EDUCATION: Education[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-1',
-  },
-  {
-    title: 'Practicing Safe Tests',
-    description: 'Automating e2e testing with Trydent',
+    title: 'practicing safe tests',
+    description: 'march 17, 2023 • automating e2e testing with trydent',
     link: '/blog/practicing-safe-tests',
-    uid: 'blog-2',
+    uid: 'blog-1',
   },
 ]
 
