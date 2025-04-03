@@ -5,23 +5,23 @@ import Link from 'next/link'
 export function Header() {
   return (
     <header className="mb-8 flex items-center justify-between">
-      <div className="flex items-center gap-3">
+      <a 
+        href="/" 
+        className="flex items-center gap-3 group"
+        onClick={(e) => {
+          e.preventDefault();
+          window.location.href = '/';
+        }}
+      >
         <img
           src="/sam.png"
           alt="Samuel Lee"
-          className="h-16 w-16 rounded-full"
+          className="h-16 w-16 rounded-full transition-transform group-hover:scale-105"
         />
         <div>
-          <a 
-            href="/" 
-            className="font-medium text-black dark:text-white"
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.href = '/';
-            }}
-          >
+          <span className="font-medium text-black dark:text-white">
             samuel lee
-          </a>
+          </span>
           <TextEffect
             as="p"
             preset="fade"
@@ -32,7 +32,7 @@ export function Header() {
             software engineer
           </TextEffect>
         </div>
-      </div>
+      </a>
     </header>
   )
 }
