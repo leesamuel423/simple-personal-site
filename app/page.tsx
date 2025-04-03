@@ -3,22 +3,23 @@ import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
+import { Tilt } from '@/components/ui/tilt'
 import {
   MorphingDialog,
-  MorphingDialogTrigger,
-  MorphingDialogContent,
   MorphingDialogClose,
   MorphingDialogContainer,
+  MorphingDialogContent,
+  MorphingDialogTrigger,
 } from '@/components/ui/morphing-dialog'
 import Link from 'next/link'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import {
-  PROJECTS,
-  WORK_EXPERIENCE,
-  EDUCATION,
   BLOG_POSTS,
+  EDUCATION,
   EMAIL,
+  PROJECTS,
   SOCIAL_LINKS,
+  WORK_EXPERIENCE,
 } from './data'
 
 const VARIANTS_CONTAINER = {
@@ -54,23 +55,23 @@ function ProjectVideo({ src }: ProjectVideoProps) {
       }}
     >
       <MorphingDialogTrigger>
-        <video
-          src={src}
-          autoPlay
-          loop
-          muted
-          className="aspect-video w-full cursor-zoom-in rounded-xl"
-        />
+        <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+          <img
+            src={src}
+            alt="Project preview"
+            className="h-full w-full object-contain"
+          />
+        </div>
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
-        <MorphingDialogContent className="relative aspect-video rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
-          <video
-            src={src}
-            autoPlay
-            loop
-            muted
-            className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
-          />
+        <MorphingDialogContent className="relative rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+          <div className="relative h-[50vh] w-full md:h-[70vh]">
+            <img
+              src={src}
+              alt="Project preview"
+              className="h-full w-full rounded-xl object-contain"
+            />
+          </div>
         </MorphingDialogContent>
         <MorphingDialogClose
           className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
@@ -137,10 +138,18 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+          <h2>hi! it's sam</h2>
+          <p className="mb-2 text-zinc-600 dark:text-zinc-400">
+            software engineer passionate about mentorship, testing, and
+            continuous learning.
           </p>
+          <ul className="space-y-1 text-zinc-600 dark:text-zinc-400">
+            <li>• learning golang</li>
+            <li>• "i use neovim btw"</li>
+            <li>• gym rat: 245b/325s/405d</li>
+            <li>• ironman 2026?</li>
+            <li>• currently reading: 11/22/63 by stephen king</li>
+          </ul>
         </div>
       </motion.section>
 
@@ -148,7 +157,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
+        <h3 className="mb-5 text-lg font-medium">experiences</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <div
@@ -184,7 +193,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Education</h3>
+        <h3 className="mb-5 text-lg font-medium">education</h3>
         <div className="flex flex-col space-y-2">
           {EDUCATION.map((edu) => (
             <div
@@ -220,7 +229,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
+        <h3 className="mb-3 text-lg font-medium">blog</h3>
         <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
@@ -256,26 +265,28 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <h3 className="mb-5 text-lg font-medium">projects</h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
-              </div>
-              <div className="px-1">
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-              </div>
+              <Tilt>
+                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                  <ProjectVideo src={project.video} />
+                </div>
+                <div className="px-1">
+                  <a
+                    className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                    href={project.link}
+                    target="_blank"
+                  >
+                    {project.name}
+                    <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
+                  </a>
+                  <p className="text-base text-zinc-600 dark:text-zinc-400">
+                    {project.description}
+                  </p>
+                </div>
+              </Tilt>
             </div>
           ))}
         </div>
@@ -284,9 +295,9 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
+        <h3 className="mb-5 text-lg font-medium">connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{' '}
+          feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
