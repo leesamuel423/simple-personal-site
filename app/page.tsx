@@ -241,11 +241,15 @@ export default function Personal() {
             }}
           >
             {BLOG_POSTS.map((post) => (
-              <Link
+              <a
                 key={post.uid}
                 className="-mx-3 rounded-xl px-3 py-3"
                 href={post.link}
                 data-id={post.uid}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = post.link;
+                }}
               >
                 <div className="flex flex-col space-y-1">
                   <h4 className="font-normal dark:text-zinc-100">
@@ -255,7 +259,7 @@ export default function Personal() {
                     {post.description}
                   </p>
                 </div>
-              </Link>
+              </a>
             ))}
           </AnimatedBackground>
         </div>

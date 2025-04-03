@@ -12,9 +12,16 @@ export function Header() {
           className="h-16 w-16 rounded-full"
         />
         <div>
-          <Link href="/" className="font-medium text-black dark:text-white">
+          <a 
+            href="/" 
+            className="font-medium text-black dark:text-white"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.href = '/';
+            }}
+          >
             samuel lee
-          </Link>
+          </a>
           <TextEffect
             as="p"
             preset="fade"
