@@ -4,6 +4,8 @@ import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import { ScrollProgress } from '@/components/ui/scroll-progress'
+import { TabVisibilityHandler } from '@/components/ui/tab-visibility'
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -12,7 +14,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Samuel Lee Personal Website',
+  title: "it's sam",
   description: "Samuel Lee's personal corner of the internet",
 }
 
@@ -36,6 +38,12 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
+        <ScrollProgress
+          className="fixed top-0 z-20 h-0.5 bg-gray-300 dark:bg-zinc-600"
+          springOptions={{
+            bounce: 0,
+          }}
+        />
         <ThemeProvider
           enableSystem={true}
           attribute="class"
@@ -43,6 +51,7 @@ export default function RootLayout({
           defaultTheme="system"
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+            <TabVisibilityHandler />
             <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
               <Header />
               {children}
