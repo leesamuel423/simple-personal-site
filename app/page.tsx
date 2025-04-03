@@ -146,7 +146,7 @@ export default function Personal() {
           <ul className="space-y-1 text-zinc-600 dark:text-zinc-400">
             <li>• learning golang</li>
             <li>• "i use neovim btw"</li>
-            <li>• gym rat: 245b/325s/405d</li>
+            <li>• gym rat - b: 245 | s: 325 | d: 405</li>
             <li>• ironman 2026?</li>
             <li>• currently reading: 11/22/63 by stephen king</li>
           </ul>
