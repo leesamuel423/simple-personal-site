@@ -138,14 +138,14 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <h2>hi! it's sam</h2>
+          <h2>hi! it&apos;s sam</h2>
           <p className="mb-2 text-zinc-600 dark:text-zinc-400">
             software engineer passionate about mentorship, testing, and
             continuous learning.
           </p>
           <ul className="space-y-1 text-zinc-600 dark:text-zinc-400">
             <li>• learning golang</li>
-            <li>• "i use neovim btw"</li>
+            <li>• &quot;i use neovim btw&quot;</li>
             <li>• gym rat - b: 245 | s: 325 | d: 405</li>
             <li>• ironman 2026?</li>
             <li>• currently reading: 11/22/63 by stephen king</li>

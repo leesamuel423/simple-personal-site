@@ -8,8 +8,8 @@ export function TabVisibilityHandler() {
     const favicon = document.createElement('link')
     favicon.rel = 'icon'
     favicon.id = 'favicon'
-    favicon.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'
-    
+    favicon.href = 
+      'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'
     // Replace any existing favicon or add a new one
     const existingFavicon = document.querySelector("link[rel='icon']")
     if (existingFavicon) {
@@ -22,17 +22,17 @@ export function TabVisibilityHandler() {
       const newFavicon = document.createElement('link')
       newFavicon.rel = 'icon'
       newFavicon.id = 'favicon'
-      
       if (document.hidden) {
         // When tab is not active/visible
         document.title = "come back! | it's sam"
-        newFavicon.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">😢</text></svg>'
+        newFavicon.href = 
+          'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">😢</text></svg>'
       } else {
         // When tab becomes active/visible again
         document.title = "it's sam"
-        newFavicon.href = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'
+        newFavicon.href = 
+          'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'
       }
-      
       // Replace existing favicon
       const existingFavicon = document.querySelector("link[rel='icon']")
       if (existingFavicon) {
@@ -53,4 +53,3 @@ export function TabVisibilityHandler() {
 
   return null // This component doesn't render anything
 }
-
