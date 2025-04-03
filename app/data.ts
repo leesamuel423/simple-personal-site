@@ -52,7 +52,7 @@ export const PROJECTS: Project[] = [
   {
     name: 'ai chess',
     description: 'chess ai utilizing minmax w/ alpha-beta pruning (fail-soft)',
-    link: 'https://motion-primitives.com/',
+    link: 'https://github.com/leesamuel423/ai-chess',
     video: '/ai-chess.gif',
     id: 'project3',
   },
@@ -66,14 +66,14 @@ export const PROJECTS: Project[] = [
   {
     name: 'running gait analysis',
     description: "video recognition software for analyzing one's running gait",
-    link: 'https://motion-primitives.com/',
+    link: 'https://github.com/ErPang97/RunningGaitAnalysis',
     video: '/running-gait-analysis.gif',
     id: 'project5',
   },
   {
     name: 'message queue visualization',
     description: 'visualization of message queues for educational purposes',
-    link: 'https://motion-primitives.com/',
+    link: 'https://github.com/leesamuel423/message-queue-vis',
     video: '/message-queue-vis-gif.gif',
     id: 'project6',
   },
