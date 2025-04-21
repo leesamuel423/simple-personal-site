@@ -3,5 +3,7 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/(.*)", "destination": "/site.html" }
-  ]
+  ],
+  "buildCommand": "echo 'No build step needed'",
+  "outputDirectory": "."
 }
