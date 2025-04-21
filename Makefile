@@ -1,37 +1,28 @@
-.PHONY: install dev build start lint
+.PHONY: serve open clean help
 
-# Install dependencies
-install:
-	npm install
+# Serve the HTML file locally
+serve:
+	python3 -m http.server 3000
 
-# Run the development server
-dev:
-	npm run dev
+# Open the HTML file in browser
+open:
+	open site.html
 
-# Build the application for production
-build:
-	npm run build
+# Open and serve the site
+view: open serve
 
-# Start the production server
-start:
-	npm start
-
-# Run linting
-lint:
-	npm run lint
-
-# Clean up node_modules and build artifacts
+# Clean up unnecessary files (be careful with this command)
 clean:
-	rm -rf node_modules
-	rm -rf .next
-	rm -rf out
+	@echo "This will remove all files except site.html, vercel.json, Makefile, and README.md"
+	@echo "Press Ctrl+C to cancel or Enter to continue"
+	@read
+	@find . -type f -not -path "./.git/*" -not -name "site.html" -not -name "vercel.json" -not -name "Makefile" -not -name "README.md" -not -name ".gitignore" -delete
+	@find . -type d -not -path "./.git*" -not -path "." -not -path "./public" | sort -r | xargs rm -rf
 
 # Help command
 help:
 	@echo "Available commands:"
-	@echo "  make install  - Install dependencies"
-	@echo "  make dev      - Start development server"
-	@echo "  make build    - Build for production"
-	@echo "  make start    - Start production server"
-	@echo "  make lint     - Run linting"
-	@echo "  make clean    - Remove node_modules and build directories"
+	@echo "  make serve   - Start a local server at http://localhost:3000"
+	@echo "  make open    - Open site.html in your default browser"
+	@echo "  make view    - Open the site and serve it locally"
+	@echo "  make clean   - Remove unnecessary files (use with caution)"

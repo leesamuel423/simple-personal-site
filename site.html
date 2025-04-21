@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>it's sam</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
+  <style>
+    :root {
+      --bg: #121212;
+      --fg: #e6e6e6;
+      --muted: #a2a2a2;
+      --border: #303030;
+      --accent: #7f5af0;
+      --transition: all 0.25s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      max-width: 650px;
+    }
+
+    h1,
+    h2 {
+      margin: 0 0 0.5rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--fg);
+    }
+
+    h2 {
+      color: var(--muted);
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.01em;
+    }
+
+    header {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      max-width: 60ch;
+    }
+
+    ul {
+      padding-left: 1rem;
+      margin-bottom: 1.5rem;
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      font-weight: 300;
+    }
+
+    li::before {
+      content: "·";
+      position: absolute;
+      left: -1rem;
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--fg);
+      text-decoration: none;
+      transition: var(--transition);
+      border-bottom: 1px dotted var(--muted);
+      cursor: default;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .job,
+    .edu {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .title {
+      margin-bottom: 0.3rem;
+    }
+
+    .company {
+      font-weight: 400;
+      color: var(--fg);
+    }
+
+    .role {
+      display: block;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+    }
+
+    .org {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 300;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      body {
+        padding: 4rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .job,
+      .edu {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 1rem;
+        align-items: start;
+      }
+
+      .org {
+        text-align: right;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem;">
+      <img src="/sam.png" alt="Sam Lee" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;" />
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <h1 style="margin: 0;">hi! it's sam</h1>
+        <div style="margin-top: 0.5rem;">
+          <a href="https://www.linkedin.com/in/leesamuel423/" target="_blank" style="margin-right: 1rem;">linkedin</a>
+          <a href="https://github.com/leesamuel423" target="_blank">github</a>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 0; margin-bottom: 1.5rem;">
+      software engineer passionate about mentorship, testing, and continuous
+      learning.
+    </p>
+    <ul>
+      <li>learning golang</li>
+      <li>"i use neovim btw"</li>
+      <li>gym rat – b: 245 | s: 325 | d: 405</li>
+      <li>ironman 2026?</li>
+      <li>currently reading: <em>11/22/63</em> by stephen king</li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>experiences</h2>
+    <div class="grid">
+      <div class="job">
+        <div class="title">
+          <span class="company">google</span>
+          <span class="role">incoming software engineering intern (masters)</span>
+        </div>
+        <span class="org">oct 2025 – jan 2026</span>
+      </div>
+      <div class="job">
+        <div class="title">
+          <span class="company">starbourne labs</span>
+          <span class="role">full‑stack software engineer</span>
+        </div>
+        <span class="org">aug 2024 – present</span>
+      </div>
+      <div class="job">
+        <div class="title">
+          <span class="company">codesmith</span>
+          <span class="role">engineering instructor</span>
+        </div>
+        <span class="org">jul 2024 – present</span>
+      </div>
+      <div class="job">
+        <div class="title">
+          <span class="company">alki</span>
+          <span class="role">founder</span>
+        </div>
+        <span class="org">jul 2023 – present</span>
+      </div>
+      <div class="job">
+        <div class="title">
+          <span class="company">meta</span>
+          <span class="role">production engineering fellow</span>
+        </div>
+        <span class="org">jun 2024 – sep 2024</span>
+      </div>
+      <div class="job">
+        <div class="title">
+          <span class="company">cs engineering</span>
+          <span class="role">software engineer</span>
+        </div>
+        <span class="org">jun 2023 – jun 2024</span>
+      </div>
+      <div class="job">
+        <div class="title">
+          <span class="company">oslabs</span>
+          <span class="role">software engineer</span>
+        </div>
+        <span class="org">mar 2023 – jun 2023</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>education</h2>
+    <div class="grid">
+      <div class="edu">
+        <div class="title">
+          <span class="company">university of pennsylvania</span>
+          <span class="role">masters of computer science</span>
+        </div>
+        <span class="org">2024 – present</span>
+      </div>
+      <div class="edu">
+        <div class="title">
+          <span class="company">mcmaster university</span>
+          <span class="role">bachelors of health sciences (honours)</span>
+        </div>
+        <span class="org">2017 – 2021</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>projects</h2>
+    <ul>
+      <li>
+        <div>
+          <a href="https://github.com/oslabs-beta/trydent" target="_blank" style="border-bottom: none;">
+            <span style="font-weight: 400;">trydent</span>
+          </a>
+          <span style="font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem;">
+            typescript · react · jest · cypress
+          </span>
+        </div>
+        <span style="display: block; font-weight: 300; font-style: italic; color: var(--muted);">
+          developer tool automating cypress code for e2e testing
+        </span>
+      </li>
+
+      <li>
+        <div>
+          <a href="https://www.alkiprep.com/" target="_blank" style="border-bottom: none;">
+            <span style="font-weight: 400;">alkiprep</span>
+          </a>
+          <span style="font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem;">
+            typescript · react · java · springboot · mongo
+          </span>
+        </div>
+        <span style="display: block; font-weight: 300; font-style: italic; color: var(--muted);">
+          algorithm learning x spaced repetition
+        </span>
+      </li>
+
+      <li>
+        <div>
+          <a href="https://github.com/ErPang97/RunningGaitAnalysis" target="_blank" style="border-bottom: none;">
+            <span style="font-weight: 400;">running gait analysis</span>
+          </a>
+          <span style="font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem;">
+            python · flask · typescript · react · ultralytics
+          </span>
+        </div>
+        <span style="display: block; font-weight: 300; font-style: italic; color: var(--muted);">
+          computer vision app to analyze running form
+        </span>
+      </li>
+
+      <li>
+        <div>
+          <a href="https://github.com/leesamuel423/ai-chess" target="_blank" style="border-bottom: none;">
+            <span style="font-weight: 400;">chess ai</span>
+          </a>
+          <span style="font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem;">
+            python · flask · pytest · pyqt6
+          </span>
+        </div>
+        <span style="display: block; font-weight: 300; font-style: italic; color: var(--muted);">
+          chess ai using minmax w/ alpha-beta pruning (fail-soft)
+        </span>
+      </li>
+
+      <li>
+        <div>
+          <a href="https://github.com/leesamuel423/StravaGraph" target="_blank" style="border-bottom: none;">
+            <span style="font-weight: 400;">strava graph</span>
+          </a>
+          <span style="font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem;">
+            golang · cicd
+          </span>
+        </div>
+        <span style="display: block; font-weight: 300; font-style: italic; color: var(--muted);">
+          strava heatmap for github profiles
+        </span>
+      </li>
+
+      <li>
+        <div>
+          <a href="https://github.com/leesamuel423/mock-cli" target="_blank" style="border-bottom: none;">
+            <span style="font-weight: 400;">mock-cli</span>
+          </a>
+          <span style="font-size: 0.85rem; color: var(--muted); margin-left: 0.5rem;">
+            golang
+          </span>
+        </div>
+        <span style="display: block; font-weight: 300; font-style: italic; color: var(--muted);">
+          cli tool for mocking interview questions
+        </span>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    © 2025 samuel lee
+  </footer>
+
+  <script>
+    // Tab visibility handler - changes title and favicon when tab is not active
+    function setupTabVisibility() {
+      const originalTitle = "it's sam";
+      const awayTitle = "come back! | it's sam";
+
+      const handleVisibilityChange = () => {
+        // Create favicon elements
+        const newFavicon = document.createElement('link');
+        newFavicon.rel = 'icon';
+        newFavicon.id = 'favicon';
+
+        if (document.hidden) {
+          // When tab is not active/visible
+          document.title = awayTitle;
+          newFavicon.href =
+            'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">😢</text></svg>';
+        } else {
+          // When tab becomes active/visible again
+          document.title = originalTitle;
+          newFavicon.href =
+            'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>';
+        }
+
+        // Replace existing favicon
+        const existingFavicon = document.querySelector("link[rel='icon']");
+        if (existingFavicon) {
+          document.head.replaceChild(newFavicon, existingFavicon);
+        } else {
+          document.head.appendChild(newFavicon);
+        }
+      };
+
+      // Add event listener for visibility change
+      document.addEventListener('visibilitychange', handleVisibilityChange);
+    }
+
+    // Initialize the tab visibility handler
+    document.addEventListener('DOMContentLoaded', setupTabVisibility);
+  </script>
+</body>
+
+</html>

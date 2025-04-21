@@ -1,52 +1,32 @@
-# Samuel Lee Personal Page
+# Samuel Lee Personal Portfolio
 
-## Getting Started
+A minimalist HTML portfolio site deployed on Vercel.
 
-### Using Make
+## Local Development
 
-This project includes a Makefile to simplify common commands:
-
-```bash
-# Install dependencies
-make install
-
-# Start development server
-make dev
-
-# Build for production
-make build
-
-# Start production server
-make start
-
-# Run linting
-make lint
-```
-
-### Manual Commands
-
-Alternatively, you can use npm directly:
+This project includes a Makefile to simplify viewing and serving the site locally:
 
 ```bash
-# Install dependencies
-npm install
+# Open site.html in your default browser
+make open
 
-# Start development server
-npm run dev
+# Start a local server at http://localhost:3000
+make serve
 
-# Build for production
-npm run build
+# Open the site and serve it locally
+make view
 
-# Start production server
-npm start
+# Show all available commands
+make help
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deployment
+
+The site is configured to deploy on Vercel with a simple configuration:
+
+- `site.html` - Contains all the content and styling for the portfolio
+- `vercel.json` - Configures Vercel to serve the single HTML file for all routes
 
 ## Customization
 
-The site content is managed through data files in the `/app` directory. To update content, modify the data in:
-
-- `/app/data.ts` - Projects, work experience, education, blog posts, and contact info
-- `/app/blog/` - Blog post content (MDX files)
-
+To update the portfolio, simply edit the `site.html` file directly.
