@@ -4,6 +4,6 @@
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ],
-  "buildCommand": false,
+  "buildCommand": null,
   "outputDirectory": "."
 }
