@@ -30,3 +30,8 @@ The site is configured to deploy on Vercel with a simple configuration:
 ## Customization
 
 To update the portfolio, simply edit the `site.html` file directly.
+
+## Performance
+- Lighthouse performance [link](https://pagespeed.web.dev/analysis/https-www-leesamuel423-com/0ui50is05r?form_factor=desktop&category=performance&category=accessibility&category=best-practices&category=seo&hl=en-US&utm_source=lh-chrome-ext)
+
+![Lighthouse-Score](./lighthouse-score.png)
