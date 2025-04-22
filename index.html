@@ -19,7 +19,7 @@
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>" />
 
   <!-- Preload critical resources -->
-  <link rel="preload" href="sam-160.webp" as="image" type="image/webp" fetchpriority="high" />
+  <link rel="preload" href="sam-80.webp" as="image" type="image/webp" fetchpriority="high" />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" />
   <style>
     :root {
@@ -235,8 +235,9 @@
   <header>
     <figure style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem;">
       <picture>
-        <source srcset="sam-160.webp, sam.webp 2x" type="image/webp">
-        <source srcset="sam-160.png, sam.png 2x" type="image/png">
+        <!-- Use exact 80px image for optimal performance -->
+        <source srcset="sam-80.webp" type="image/webp">
+        <source srcset="sam-160.png" type="image/png">
         <img src="sam-160.png" alt="Sam Lee" width="80" height="80" loading="eager" fetchpriority="high"
           style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;" />
       </picture>
